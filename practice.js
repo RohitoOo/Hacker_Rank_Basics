@@ -131,3 +131,26 @@ staircase(10)
 //   #######
 //  ########
 // #########
+
+
+function minMax(num) {
+
+  var sumFrw = 0;
+  var sumBack = 0;
+
+  for (let i = 0; i < num.length; i++) {
+
+    sumFrw += num[i]
+
+    sumBack += num[i]
+
+  }
+  sumFrw = sumFrw - num[0]
+  sumBack = sumBack - num[num.length - 1]
+
+  console.log(sumFrw)
+  console.log(sumBack)
+
+}
+
+minMax([1, 2, 3, 4, 5]);
