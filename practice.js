@@ -139,18 +139,59 @@ function minMax(num) {
   var sumBack = 0;
 
   for (let i = 0; i < num.length; i++) {
-
     sumFrw += num[i]
-
     sumBack += num[i]
-
   }
   sumFrw = sumFrw - num[0]
   sumBack = sumBack - num[num.length - 1]
 
-  console.log(sumFrw)
-  console.log(sumBack)
-
+  console.log("Sum of Array[Second] to Array[Last] = " + sumFrw)
+console.log("Sum of Array[First] to Array[SecondLast] = " + sumBack)
 }
 
 minMax([1, 2, 3, 4, 5]);
+
+// Sum of Array[Second] to Array[Last] = 14
+// Sum of Array[First] to Array[SecondLast] = 10
+
+
+
+
+var arr = [1,12,12,12,1,3,6,6]
+var largest = 0;
+var secondLargest = 0
+var count = 0;
+var Count = 0
+for (let i = 0; i < arr.length; i++) {
+
+  if (arr[i] > largest) {
+    largest = arr[i]
+  }
+
+  if (arr[i] < largest && arr[i] > secondLargest)
+    secondLargest = arr[i]
+}
+
+arr.map((num) => {
+
+  if (largest == num) {
+    count++
+  }
+
+})
+
+arr.map((num) => {
+
+  if (secondLargest == num) {
+    Count++
+  }
+
+})
+
+
+console.log("Largest Number: " + largest + " Count : " + count)
+console.log("Second Largest Number: " + secondLargest + " Count : " + Count)
+
+
+// Largest Number: 12 Count : 3
+// Second Largest Number: 6 Count : 2
