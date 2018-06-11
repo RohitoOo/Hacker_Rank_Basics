@@ -195,3 +195,41 @@ console.log("Second Largest Number: " + secondLargest + " Count : " + Count)
 
 // Largest Number: 12 Count : 3
 // Second Largest Number: 6 Count : 2
+
+var time = "6:00:PM";
+var message = ""
+
+time = time.split(':')
+
+time[0] = parseInt(time[0])
+
+if (time.includes("PM")) {
+  time[0] = time[0] + 12
+}
+
+time.pop(time[time.length - 1])
+
+time[0] = Number(time[0])
+
+time = time.join(":")
+
+console.log("Time in 24 Hour Clock : " + time);
+
+// Time in 24 Hour Clock : 18:00
+
+
+var grades = [73, 67, 38, 33]
+
+grades.map((each) => {
+
+  if (each > 37 && each % 5 > 2) {
+
+    return "Rounded Grades : " + (
+    each + (5 - each % 5))
+
+  }
+  return each
+
+})
+
+// [ 'Rounded Grades : 75', 67, 'Rounded Grades : 40', 33 ]
