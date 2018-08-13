@@ -26,7 +26,7 @@ LongestWord("I love Javascript")  // Javascript
 
 
 
-// First Factorial
+// First Factorial Using Recursion
 
 function FirstFactorial(num) {
 
@@ -40,12 +40,121 @@ else {
 
 }
 
+}
+
+FirstFactorial(4) // 4*3*2*1  // 24
+
+
+
+// Reverse a String
+
+
+function FirstReverse(str) {
+
+
+  str = str
+  .split('')
+  .reverse()
+  .join('')
+
+  return str;
 
 }
 
-FirstFactorial(4) // 10
 
- 
+FirstReverse("Hello") // olleH
+
+
+
+
+// Letter Changes using RegEX
+
+
+function LetterChanges(str) {
+
+  // we will replace every letter in the string with the letter following it
+  // by first getting the charCode number of the letter, adding 1 to it, then
+  // converting this new charCode number to a letter using the fromCharCode function
+  // we also check to see if the character is z and if so we simply convert the z to an a
+  var converted = str.replace(/[a-z]/gi, function(char) {
+    return (char === 'z' || char === 'Z') ? 'a' : String.fromCharCode(char.charCodeAt() + 1);
+  });
+
+  // we have now successfully converted each letter to the letter following it
+  // in the alphabet, and all we need to do now is capitalize the vowels
+  var capitalized = converted.replace(/a|e|i|o|u/gi, function(vowel) {
+    return vowel.toUpperCase();
+  });
+
+  // return the final string
+  return capitalized;
+
+}
+
+LetterChanges("az1"); // bA1
+
+// Simple Adding
+
+function SimpleAdding(num) {
+
+ var sum;
+
+ sum =  (num  *( num+1))  / 2
+
+ return sum
+
+}
+// keep this function call here
+SimpleAdding(4) // 10
+
+
+
+// Capitalize firt Letter of Every Word
+
+function LetterCapitalize(str) {
+
+let words =  str.split(' ')
+
+for ( i = 0 ; i < words.length ; i++) {
+
+ words[i] = words[i].substring(0,1).toUpperCase() + words[i].substring(1)
+
+}
+
+words = words.join(' ')
+return words
+
+}
+
+// keep this function call here
+LetterCapitalize("i love you baby"); // I Love You Baby
+
+
+
+// Check if num 2 is greater than num1
+
+function CheckNums(num1,num2) {
+
+if ( num2 > num1 ) {
+  return true
+}
+
+else if (num1 == num2 ){
+  return -1
+}
+else
+
+return false
+
+}
+
+// keep this function call here
+CheckNums(10 , 100 )  // true
+
+
+//
+
+
 
 
 
