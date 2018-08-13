@@ -104,7 +104,7 @@ function SimpleAdding(num) {
  return sum
 
 }
-// keep this function call here
+
 SimpleAdding(4) // 10
 
 
@@ -126,7 +126,6 @@ return words
 
 }
 
-// keep this function call here
 LetterCapitalize("i love you baby"); // I Love You Baby
 
 
@@ -148,13 +147,54 @@ return false
 
 }
 
-// keep this function call here
 CheckNums(10 , 100 )  // true
 
 
-//
+// Time Convert To Hours and Minutes
 
 
+
+function TimeConvert(num) {
+
+var minutes;
+var hours;
+
+hours = (parseInt(num/60) )
+
+if ( num >= 60 ) {
+minutes = num % 60
+}
+
+if ( num < 60 ) {
+minutes = num
+}
+
+num = hours + ":" + minutes
+
+return num
+
+}
+
+TimeConvert(45) // 0 : 45
+
+
+
+
+// Sort in Ascending Order
+
+function AlphabetSoup(str) {
+
+str = str
+.toLowerCase()
+.split('')
+.sort()
+.join('')
+
+return str
+
+}
+
+AlphabetSoup("cBdz") // bcdz
 
 
 
