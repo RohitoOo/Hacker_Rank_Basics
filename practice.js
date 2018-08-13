@@ -1,3 +1,54 @@
+// Longest Word
+
+function LongestWord(sen) {
+
+var longest = ""
+
+sen = sen
+.replace(/W/g , " ")
+
+words = sen.split(' ')
+
+for ( i = 0 ; i < words.length ; i ++) {
+
+  if(words[i].length > longest.length) {
+    longest = words[i]
+  }
+
+}
+
+return longest
+}
+
+LongestWord("I love Javascript")  // Javascript
+
+
+
+
+
+// First Factorial
+
+function FirstFactorial(num) {
+
+if ( num == 1 ) {
+
+    return num
+
+}
+else {
+    return num * FirstFactorial(num - 1 )
+
+}
+
+
+}
+
+FirstFactorial(4) // 10
+
+ 
+
+
+
 var array = [1,-2,0,0,4,34,4,32,-54,-543,54,543,0 ,0,0,0];
 
 function abc(arr) {
